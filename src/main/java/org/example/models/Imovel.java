@@ -68,4 +68,6 @@ public abstract class Imovel {
     public boolean getDisponivel() {
         return  disponivel;
     }
+
+
 }

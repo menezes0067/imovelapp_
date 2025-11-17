@@ -10,9 +10,6 @@ public class Proprietario {
     private String email;
     private String telefone;
 
-    /*
-    * Construtor vázio para deserialização em json
-    * */
     public Proprietario(){}
 
     public Proprietario(int id, String nome, int idade, String cpf, String email, String telefone){
