@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ImovelApp</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+<div class="container-main">
+    <div class="menu">
+        <div class="logo">
+            <i class="bi bi-houses-fill"></i>
+            <p>Imovelapp</p>
+        </div>
+        <ul class="navigation-buttons">
+            <li>
+                <a href="index.html">
+                    <button class="button-nav">
+                        <i class="bi bi-person"></i>
+                        Proprietarios
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="imoveis.html">
+                    <button class="button-nav"><i class="bi bi-building"></i>
+                        Imóveis
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="container-content">
+        <div class="register-section">
+            <p>Gerenciamento de Imoveis</p>
+            <button class="register-button open_modal" data-modal="modal-1"><i class="bi bi-plus"></i>
+                Adicionar Imóvel
+            </button>
+            <dialog id="modal-1">
+                <div class="forms">
+                    <form id="register-form">
+                        <h1>Cadastrar Proprietario</h1>
+                        <p>Preencha os campos abaixo para adicionar um novo proprietario</p>
+                        <div class="content-form">
+                            <p class="subtitle">Informações Pessoais</p>
+
+                            <div class="field">
+                                <label>Nome Completo</label>
+                                <input type="text" placeholder="Digite o nome completo">
+                            </div>
+
+                            <div class="field">
+                                <label>Nome Completo</label>
+                                <input type="text" placeholder="Digite o nome completo">
+                            </div>
+
+                            <div class="field">
+                                <label>Nome Completo</label>
+                                <input type="text" placeholder="Digite o nome completo">
+                            </div>
+
+                            <div class="field">
+                                <label>Nome Completo</label>
+                                <input type="text" placeholder="Digite o nome completo">
+                            </div>
+
+                            <div class="field">
+                                <label>Nome Completo</label>
+                                <input type="text" placeholder="Digite o nome completo">
+                            </div>
+                        </div>
+
+                        <div class="button-forms">
+                            <button type="button" class="close-modal" data-modal="modal-1">Cancelar</button>
+                            <button type="submit" class="button-register" data-modal="modal-1">Cadastrar Proprietário</button>
+                        </div>
+                    </form>
+
+                </div>
+            </dialog>
+        </div>
+        <div class="information-section">
+
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
+
+<script src="./js/modal.js"></script>
