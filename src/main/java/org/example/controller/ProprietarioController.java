@@ -15,7 +15,7 @@ public class ProprietarioController {
             proprietarioDAO.criarProprietario(proprietario);
             ctx.status(201).result("Proprietario criado com sucesso");
         } catch(SQLException ex) {
-            ctx.status(500).result(ex.getMessage());
+
             ex.printStackTrace();
         } catch(ClassNotFoundException ex) {
             ctx.status(500).result(ex.getMessage());

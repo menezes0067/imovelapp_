@@ -10,10 +10,9 @@ import java.sql.SQLException;
 
 
 public class ProprietarioDAO {
-    MySQLConnection mysqlconnection;
 
     public void criarProprietario(Proprietario proprietario) throws SQLException, ClassNotFoundException {
-        Connection con = mysqlconnection.getConnection();
+        Connection con = MySQLConnection.getConnection();
         String script = "INSERT INTO proprietario (" +
                 "id, " +
                 "nome, " +
@@ -35,7 +34,7 @@ public class ProprietarioDAO {
     }
 
     public Proprietario exibirProprietariosPorId(Proprietario proprietario) throws SQLException, ClassNotFoundException {
-        Connection con = mysqlconnection.getConnection();
+        Connection con = MySQLConnection.getConnection();
         String script = "SELECT * FROM proprietario WHERE id = ? ";
         PreparedStatement preparedStatement = con.prepareStatement(script);
         preparedStatement.setInt(1, proprietario.getId());

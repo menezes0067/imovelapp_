@@ -69,5 +69,8 @@ public abstract class Imovel {
         return  disponivel;
     }
 
+    public Proprietario getProprietario() {
+        return proprietario;
+    }
 
 }

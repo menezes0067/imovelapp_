@@ -1,6 +1,7 @@
 package org.example;
 
 import io.javalin.Javalin;
+import org.example.controller.ImovelController;
 import org.example.controller.ProprietarioController;
 
 public class Main {
@@ -11,7 +12,10 @@ public class Main {
                 }).start(7000);
 
         ProprietarioController proprietariocontroller = new ProprietarioController();
+        ImovelController imovelcontroller = new ImovelController();
 
         app.post("/proprietario", proprietariocontroller::criarProprietario);
+
+        app.post("/imovel", imovelcontroller::criarImovel);
     }
 }
