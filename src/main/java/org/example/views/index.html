@@ -52,27 +52,27 @@
 
                                 <div class="field">
                                     <label>Nome Completo</label>
-                                    <input type="text" placeholder="Digite o nome completo">
+                                    <input type="text" name="nome" placeholder="Digite o nome completo">
                                 </div>
 
                                 <div class="field">
                                     <label>Idade</label>
-                                    <input type="number" placeholder="Digite sua idade">
+                                    <input type="number" name="idade" placeholder="Digite sua idade">
                                 </div>
 
                                 <div class="field">
                                     <label>CPF</label>
-                                    <input type="text" placeholder="Digite o seu CPF">
+                                    <input type="text" name="cpf" placeholder="Digite o seu CPF">
                                 </div>
 
                                 <div class="field">
                                     <label>Email</label>
-                                    <input type="email" placeholder="Digite o seu email">
+                                    <input type="email" name="email" placeholder="Digite o seu email">
                                 </div>
 
                                 <div class="field">
                                     <label>Numero de telefone</label>
-                                    <input type="tel" placeholder="Digite o seu telefone">
+                                    <input type="tel" name="telefone" placeholder="Digite o seu telefone">
                                 </div>
                             </div>
 
@@ -89,7 +89,7 @@
                 <div class="search-section">
                     <div class="input-wrapper">
                         <span class="icon">🔍</span>
-                        <input type="text" placeholder="Buscar por nome, CPF ou e-mail...">
+                        <input type="text" id="search-input"  placeholder="Buscar por nome, CPF ou e-mail..." autocomplete="off">
                     </div>
                     <button class="clear-btn">Limpar Filtros</button>
                 </div>
@@ -105,43 +105,26 @@
                         </tr>
                         </thead>
 
-                        <tbody>\
-                        <tr>
-                            <td>João da Silva</td>
-                            <td>123.456.789-00</td>
-                            <td>joao.silva@example.com</td>
-                            <td>3</td>
-                            <td class="actions">
-                                <span class="edit">✏️</span>
-                                <span class="delete">🗑️</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Maria Oliveira</td>
-                            <td>987.654.321-00</td>
-                            <td>maria.o@example.com</td>
-                            <td>1</td>
-                            <td class="actions">
-                                <span class="edit">✏️</span>
-                                <span class="delete">🗑️</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Carlos Pereira</td>
-                            <td>111.222.333-44</td>
-                            <td>carlos.pereira@example.com</td>
-                            <td>5</td>
-                            <td class="actions">
-                                <span class="edit">✏️</span>
-                                <span class="delete">🗑️</span>
-                            </td>
-                        </tr>
+                        <tbody class="proprietary-information">
                         </tbody>
+
+                        <dialog id="modal-delete">
+                            <form>
+                                <div class="text-delete-button">
+                                    <span>Deseja apagar esse proprietario ?</span>
+                                </div>
+                                <div class="button-forms-delete" >
+                                    <button type="button" class="close-modal-button" data-modal="modal-delete">Não</button>
+                                    <button type="submit" class="execute-modal-delete" data-modal="modal-delete">Sim</button>
+                                </div>
+                            </form>
+                        </dialog>
+
+                        <dialog id="modal-edit">
+
+                        </dialog>
                     </table>
                 </div>
-
             </div>
         </div>
     </div>
@@ -150,3 +133,5 @@
 </html>
 
 <script src="./js/modal.js"></script>
+<script src="js/Proprietario.js"></script>
+<script src="js/filtersearch.js"></script>

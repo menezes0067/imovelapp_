@@ -26,3 +26,21 @@ document.querySelector(".close-modal").onclick = () => {
     modal1.close();
 };
 
+const modalClose = new Modal(document.querySelector('#modal-delete'));
+
+document.querySelector(".close-modal-button").onclick = () => {
+    modalClose.close();
+};
+
+document.querySelector(".execute-modal-delete").onclick = async (e) => {
+    e.preventDefault();
+    const id = modalClose.currentId;
+    await deleteProprietary(id);
+    modalClose.close();
+    await showProprietaries();
+};
+
+const
+
+
+

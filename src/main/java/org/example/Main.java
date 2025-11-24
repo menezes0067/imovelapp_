@@ -15,6 +15,9 @@ public class Main {
         ImovelController imovelcontroller = new ImovelController();
 
         app.post("/proprietario", proprietariocontroller::criarProprietario);
+        app.get("/proprietario", proprietariocontroller::exibirProprietario);
+        app.delete("/proprietario/{id}", proprietariocontroller::deletarProprietario);
+        app.put("/proprietario/{id}", proprietariocontroller::atualizarProprietario);
 
         app.post("/imovel", imovelcontroller::criarImovel);
     }

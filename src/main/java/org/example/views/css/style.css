@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/** {*/
+/*    outline: 1px solid red;*/
+/*}*/
 
 body {
     margin: 0;
@@ -195,13 +198,13 @@ dialog::backdrop {
 
 .content-form {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* duas colunas */
-    gap: 15px 20px; /* espaço entre linhas e colunas */
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px;
     margin-top: 20px;
 }
 
 .content-form .subtitle {
-    grid-column: 1 / -1; /* faz o título ocupar as duas colunas */
+    grid-column: 1 / -1;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -282,6 +285,8 @@ dialog::backdrop {
     padding: 20px;
     border-radius: 12px;
     align-self: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .search-section {
@@ -402,3 +407,65 @@ dialog::backdrop {
     opacity: 1;
 }
 
+.delete-button, .edit-button {
+    background: #1f2937;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.delete-button, .edit-button:hover {
+    transition: 0.5s;
+}
+
+td:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+th:last-child {
+    width: 1%;
+    white-space: nowrap;
+}
+
+#modal-delete {
+    background-color: #0e1527;
+    border-radius: 10px;
+    border: none;
+    animation: slideDown 0.3s ease forwards;
+}
+
+.button-forms-delete {
+    display: flex;
+    gap: 16px;
+    justify-content: space-evenly;
+
+    button {
+        width: 100px;
+        height: 30px;
+        border:none;
+        background: cyan;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+.text-delete-button {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-forms-delete:first-child {
+    background-color: cyan;
+}
+
+
+.text-delete-button {
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 0 10px 0;
+}
