@@ -40,7 +40,17 @@ document.querySelector(".execute-modal-delete").onclick = async (e) => {
     await showProprietaries();
 };
 
-const
+const modalEdit = new Modal(document.querySelector('#modal-edit'));
 
+document.querySelector(".close-modal-edit").onclick = () => {
+    modalEdit.close();
+};
 
+document.querySelector(".button-update").onclick = async (e) => {
+    e.preventDefault();
+    const id = modalEdit.currentId;
+    await updateProprietary(id);
+    modalClose.close();
+    await showProprietaries();
+};
 

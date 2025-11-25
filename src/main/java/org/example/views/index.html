@@ -101,7 +101,8 @@
                             <th>CPF</th>
                             <th>E-mail</th>
                             <th>Idade</th>
-                            <th></th>
+                            <th>Telefone</th>
+                            <th>Opções</th>
                         </tr>
                         </thead>
 
@@ -119,11 +120,37 @@
                                 </div>
                             </form>
                         </dialog>
-
-                        <dialog id="modal-edit">
-
-                        </dialog>
                     </table>
+
+                    <dialog id="modal-edit">
+                        <div class="forms">
+                            <form id="edit-form">
+                                <h1>Editar Proprietario</h1>
+                                <p>Atualize as informações de proprietario abaixo: </p>
+                                <div class="content-form">
+                                    <p class="subtitle">Informações Pessoais</p>
+                                    <div class="field">
+                                        <label>Idade</label>
+                                        <input type="number" name="idade" placeholder="Digite sua idade">
+                                    </div>
+                                    <div class="field">
+                                        <label>Email</label>
+                                        <input type="email" name="email" placeholder="Digite o seu email">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>Numero de telefone</label>
+                                        <input type="tel" name="telefone" placeholder="Digite o seu telefone">
+                                    </div>
+                                </div>
+
+                                <div class="button-forms">
+                                    <button type="button" class="close-modal-edit button-register" data-modal="modal-1">Cancelar</button>
+                                    <button type="submit" class="button-update button-register" data-modal="modal-1">Atualizar Proprietario</button>
+                                </div>
+                            </form>
+                        </div>
+                    </dialog>
                 </div>
             </div>
         </div>
