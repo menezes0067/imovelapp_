@@ -481,7 +481,7 @@ th:last-child {
 
 #modal-edit {
     width: 50%;
-    height: 44%;
+    height: 30%;
     background-color: #060b1c;
     border: none;
     border-radius: 10px;
@@ -491,14 +491,14 @@ th:last-child {
 }
 
 
-#edit-form p{
+.subtitle {
     font-size: 14px;
     font-family: "Poppins";
     color: #474747;
     margin: 0;
 }
 
-#edit-form h1 {
+h1 {
     font-family: "Poppins";
     color: #FFFFFF;
     margin: 0;

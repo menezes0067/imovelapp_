@@ -52,17 +52,17 @@
 
                             <div class="field">
                                 <label>Nome do Imovel</label>
-                                <input type="text" name="nome" placeholder="Digite o nome do Imovel">
+                                <input type="text" name="nome" required placeholder="Digite o nome do Imovel">
                             </div>
 
                             <div class="field">
                                 <label>Descreva o Imovel</label>
-                                <textarea name="descricao" placeholder="Descreva"></textarea>
+                                <textarea name="descricao" required placeholder="Descreva"></textarea>
                             </div>
 
                             <div class="field">
                                 <label>Digite o tipo do Imovel</label>
-                                <input type="text" name="tipo" placeholder="Digite o tipo do imovel">
+                                <input type="text" name="tipo" required placeholder="Digite o tipo do imovel">
                             </div>
 
 
@@ -84,7 +84,7 @@
 
                         <div class="button-forms">
                             <button type="button" class="close-modal" data-modal="modal-1">Cancelar</button>
-                            <button type="submit" class="button-register" data-modal="modal-1">Cadastrar Proprietário</button>
+                            <button type="submit" class="button-register" data-modal="modal-1">Cadastrar Imovel</button>
                         </div>
                     </form>
 
@@ -93,7 +93,71 @@
         </div>
         <div class="information-section">
             <div class="filter-section">
+                <div class="search-section">
+                    <div class="input-wrapper">
+                        <span class="icon">🔍</span>
+                        <input type="text" id="search-input"  placeholder="Buscar por nome, CPF ou e-mail..." autocomplete="off">
+                    </div>
+                    <button class="clear-btn">Limpar Filtros</button>
+                </div>
+                <div class="table-wrapper">
+                    <table class="custom-table">
+                        <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Descricao</th>
+                            <th>Tipo</th>
+                            <th>Disponivel</th>
+                            <th>Nome do Proprietario</th>
+                            <th>Opções</th>
+                        </tr>
+                        </thead>
 
+                        <tbody class="imovel-information">
+                        </tbody>
+
+                        <dialog id="modal-delete">
+                            <form>
+                                <div class="text-delete-button">
+                                    <span>Deseja apagar esse imovel ?</span>
+                                </div>
+                                <div class="button-forms-delete" >
+                                    <button type="button" class="close-modal-button" data-modal="modal-delete">Não</button>
+                                    <button type="submit" class="execute-modal-delete" data-modal="modal-delete">Sim</button>
+                                </div>
+                            </form>
+                        </dialog>
+
+                        <dialog id="modal-edit">
+                            <div class="forms">
+                                <form id="edit-form">
+                                    <h1>Editar Imovel</h1>
+                                    <p class="subtitle">Atualize as do seu imovel: </p>
+                                    <div class="content-form">
+                                        <p class="subtitle">Informações Pessoais</p>
+                                        <div class="field">
+                                            <label>Descrição</label>
+                                            <textarea name="descricao" required placeholder="Nova descricao"></textarea>
+                                        </div>
+
+                                        <div class="field">
+                                            <label>Disponivel</label>
+                                            <select name="disponivel">
+                                                <option value="1">Sim</option>
+                                                <option value="0">Não</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="button-forms">
+                                        <button type="button" class="close-modal-edit button-register" data-modal="modal-1">Cancelar</button>
+                                        <button type="submit" class="button-update button-register" data-modal="modal-1">Atualizar Imovel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </dialog>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

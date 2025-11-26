@@ -23,6 +23,10 @@ public class Imovel {
     this.proprietario = proprietario;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public int getId() {
         return id;
     }
@@ -57,6 +61,10 @@ public class Imovel {
 
     public boolean getDisponivel() {
         return  disponivel;
+    }
+
+    public void setProprietario(Proprietario proprietario) {
+        this.proprietario = proprietario;
     }
 
     public Proprietario getProprietario() {
